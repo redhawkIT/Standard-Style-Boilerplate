@@ -1,20 +1,15 @@
-.MessagesList {
+.MessageBox {
   list-style-type: none;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  .MessageBox {
-    .message-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      img {
-        max-height: 140px;
-        max-width: 140px;
-      }
+  .message-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      max-height: 140px;
+      max-width: 140px;
     }
-    .message-body {
-      font-family: serif;
-    }
+  }
+  .message-body {
+    font-family: serif;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MessageBox = ({ author, message, date }) =>
-  <div className='MessageBox'>
+  <li className='MessageBox'>
     <div className='message-header'>
       <img
         src={`http://message-list.appspot.com${author.photoUrl}`}
@@ -11,7 +11,7 @@ const MessageBox = ({ author, message, date }) =>
     <div className='message-body'>
       <p>{message}</p>
     </div>
-  </div>
+  </li>
 
 const propTypes = {
   author: React.PropTypes.object,
