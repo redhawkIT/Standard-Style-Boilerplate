@@ -9,7 +9,7 @@ class HomePage extends React.Component {
       <div>
         <h1>Welcome to Code 501</h1>
         <h2>Building Web Apps with React + Redux</h2>
-        <Bio name='Keller' age={22}
+        <Bio myName='Keller' age={22}
           pronoun={{
             nominative: 'he',
             accusative: 'him',
