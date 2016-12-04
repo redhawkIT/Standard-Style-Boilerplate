@@ -1,7 +1,8 @@
 // jshint ignore: start
 import React from 'react'
 import axios from 'axios'
-// import _ from 'lodash'
+
+import MessageBox from '../MessageBox/MessageBox'
 
 const url = 'http://message-list.appspot.com/messages'
 
@@ -14,6 +15,7 @@ class MessagesList extends React.Component {
   }
 
   componentDidMount () {
+    // Calling after mount to prevent delays in rendering.
     axios.get(url)
     .then((res) => {
       this.setState({
@@ -25,13 +27,18 @@ class MessagesList extends React.Component {
       console.error(res)
     })
   }
+
   render () {
     return (
       <div className='MessagesList'>
         {this.state.messageList.length > 0 &&
           <ul>
             {this.state.messageList.map((m, i) =>
-              <li key={i}>{m.content}</li>
+              <MessageBox key={i}
+                author={m.author}
+                message={m.content}
+                date={m.updated}
+                />
             )}
           </ul>
         }
@@ -39,10 +46,5 @@ class MessagesList extends React.Component {
     )
   }
 }
-
-// {messageList.map((m, i) =>
-//                 <li key={i}>{m.content}</li>
-//                )}
-
-// <li key={i}>{messageList[m].content}</li>
+// <li key={i}>{m.content}</li>
 export default MessagesList
