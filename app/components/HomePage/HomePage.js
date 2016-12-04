@@ -10,7 +10,15 @@ class HomePage extends React.Component {
         <h1>Welcome to Code 501</h1>
         <h2>Building Web Apps with React + Redux</h2>
         <Bio name='Keller' age={22}
-          img='https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png' imgAlt='Adorable photo of a puppy' />
+          pronoun={{
+            nominative: 'he',
+            accusative: 'him',
+            possessive: 'his',
+            reflexive: 'himself'
+          }}
+          favoriteActivity={'watching movies'}
+          img='https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png' imgAlt='Adorable photo of a puppy'
+          />
       </div>
     )
   }

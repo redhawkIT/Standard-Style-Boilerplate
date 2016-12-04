@@ -1,16 +1,17 @@
 // jshint ignore: start
 import React from 'react'
+import _ from 'lodash'
 
 class Bio extends React.Component {
   render () {
     return (
       <div>
         <p>
-          <img src={this.props.img} alt={this.props.imgAlt} />
-          <br />
-          Hey, let's talk about me.
-          My name is {this.props.name} and I am {this.props.age}.
+          This is {this.props.name} and he is {this.props.age}.
         </p>
+        <p>{_.capitalize(this.props.pronoun.nominative)} likes {this.props.favoriteActivity}.</p>
+        <br />
+        <img src={this.props.img} alt={this.props.imgAlt} />
       </div>
     )
   }
