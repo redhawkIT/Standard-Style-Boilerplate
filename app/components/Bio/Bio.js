@@ -5,7 +5,7 @@ import _ from 'lodash'
 class Bio extends React.Component {
   render () {
     return (
-      <div>
+      <div className='Bio'>
         <p>
           This is {this.props.name} and he is {this.props.age}.
         </p>
