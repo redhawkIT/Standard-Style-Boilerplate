@@ -18,3 +18,10 @@ class Bio extends React.Component {
 }
 
 export default Bio
+
+Bio.propTypes = {
+  name: React.PropTypes.string,
+  age: React.PropTypes.number,
+  pronoun: React.PropTypes.object,
+  favoriteActivity: React.PropTypes.string
+}
