@@ -5,38 +5,49 @@ import _ from 'lodash'
 
 import MessageBox from '../MessageBox/MessageBox'
 
-const url = 'http://message-list.appspot.com/messages'
+const apiEndpoint = 'http://message-list.appspot.com/messages?limit=10'
 
 class MessagesList extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      messageList: []
+      messageList: [],
+      token: ''
     }
   }
 
-  componentDidMount () {
-    // Calling after mount to prevent delays in rendering.
+  getMessages () {
+    let url = apiEndpoint
+    if (this.state.token !== '') { url += `&pageToken=${this.state.token}` }
     axios.get(url)
     .then((res) => {
+      let oldMessages = this.state.messageList
+      let newMessages = res.data.messages
+      let combination = oldMessages.concat(newMessages)
+      let sortedMessages = _.orderBy(combination, (o) => o.updated, 'desc')
       this.setState({
-        messageList: res.data.messages
+        messageList: sortedMessages,
+        token: res.data.pageToken
       })
-      // messageList: res.data.messages
-      console.log(this.messageList)
+      console.log(this.state.messageList)
     })
     .catch((res) => {
       console.error(res)
     })
   }
 
+  componentDidMount () {
+    // Calling after mount to prevent delays in rendering.
+    this.getMessages()
+  }
+
   render () {
-    const sortedMessages = _.orderBy(this.state.messageList, (o) => o.updated, 'desc')
     return (
       <div className='MessagesList'>
+        <button onClick={this.getMessages.bind(this)}>Click me!</button>
         {this.state.messageList.length > 0 &&
           <ul>
-            {sortedMessages.map((m, i) =>
+            {this.state.messageList.map((m, i) =>
               <MessageBox key={i}
                 author={m.author}
                 message={m.content}
