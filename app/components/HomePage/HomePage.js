@@ -4,6 +4,8 @@ import React from 'react'
 import Bio from '../Bio/Bio'
 import BooksList from '../BooksList/BooksList'
 import MessagesList from '../MessagesList/MessagesList'
+import PostToSlack from '../PostToSlack/PostToSlack'
+
 
 class HomePage extends React.Component {
   render () {
@@ -21,6 +23,7 @@ class HomePage extends React.Component {
           favoriteActivity={'watching movies'}
           img='https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png' imgAlt='Adorable photo of a puppy'
           />
+        <PostToSlack />
         <BooksList />
         <MessagesList />
       </div>
