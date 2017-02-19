@@ -27,8 +27,8 @@ module.exports = React.createClass({
           toolbarTitle={this.state.pageTitle ? this.state.pageTitle : this.state.defaultTitle}
           drawerTitle='Navigation'
         >
-          <div className='content'>
-            <div className='container-fluid'>
+          <div id='body'>
+            <div id='main'>
               {React.cloneElement(this.props.children, {setTitle: this.setTitle})}
             </div>
           </div>
