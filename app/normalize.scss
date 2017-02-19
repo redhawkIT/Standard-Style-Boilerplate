@@ -1,0 +1,26 @@
+* {  /* Normalize */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {  /* Sensible Text */
+  font-size: 16px;
+  word-wrap: break-word;
+  /* Full height, responsive divs */
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+main {  /* Centering all child elements */
+  margin: auto;
+  right: 0;
+  left: 0;
+  flex: 1;
+}
+/* Children inside main are centered w/ left aligned text */
+footer {  /* Sticky footer */
+  height: 54px;
+  padding: 16px;
+  text-align: right;
+}
