@@ -19,10 +19,16 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
+    "font-awesome": "^4.7.0",
     "lodash": "^4.17.2",
     "node-sass": "^3.13.0",
     "react": "^15.4.1",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
     "react-dom": "^15.4.1",
+    "react-md": "^1.0.5",
+    "react-router": "^3.0.2",
+    "react-tap-event-plugin": "^2.0.1",
     "sass-loader": "^4.0.2"
   },
   "devDependencies": {

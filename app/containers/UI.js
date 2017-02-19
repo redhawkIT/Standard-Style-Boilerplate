@@ -1,5 +1,5 @@
 import React from 'react'
-import 'font-awesome/scss/font-awesome.scss'
+// import 'font-awesome/scss/font-awesome.scss'
 
 import NavigationDrawer from 'react-md/lib/NavigationDrawers'
 import NavItems from '../components/NavItems'
