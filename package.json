@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "code-501-react-boilerplate",
+  "name": "Standard-Style-React-Boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for [Code 501: React + Redux](https://www.codefellows.org/courses/code-501/web-application-development-with-react-and-redux/)",
+  "description": "Personal Boilerplate for rapid React project builds",
   "scripts": {
     "stats": "webpack --profile --json > stats.json",
     "start": "webpack-dev-server",
