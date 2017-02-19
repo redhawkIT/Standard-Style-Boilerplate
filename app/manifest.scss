@@ -1,7 +1,5 @@
 @import './styles/normalize.scss';
 //  Roboto Font and Material Icons
-// @import './styles/google-fonts.css';
+@import './styles/google-fonts.css';
  // React-MD Theme: Blue-Green
-// @import 'react-md/dist/react-md.blue-green.min.css';
-
-@import './styles/theme.css'
+@import './styles/md-theme.scss'
